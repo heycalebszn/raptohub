@@ -21,8 +21,7 @@ export default function RaptoHub() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Filter resources based on selected category and search term
+  
   const filteredResources = resourcesData
     .filter(resource => 
       (selectedCategory === "all" || resource.category === selectedCategory) &&

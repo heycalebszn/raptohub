@@ -1,3 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cyber-darker text-white font-sans;
+    background-image: radial-gradient(circle at 50% 50%, rgba(42, 33, 77, 0.1) 0%, rgba(11, 11, 15, 0.1) 100%);
+  }
+  
+  ::selection {
+    @apply bg-neon-purple/30 text-white;
+  }
+}
+
+@layer components {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .glassmorphism {
+    @apply bg-cyber-light/20 backdrop-blur-md border border-primary-500/20;
+  }
+  
+  .neon-text {
+    @apply bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent;
+  }
+  
+  .neon-border {
+    @apply border border-neon-purple shadow-neon;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cyber-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-neon-blue to-neon-purple rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gradient-to-b from-neon-purple to-neon-pink;
+}
