@@ -41,7 +41,7 @@ export default function RaptoHub() {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 <span className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? 'text-purple-700' : 'text-white'}`}>
-                  Rapto<span className="text-purple-500">Hub</span>
+                  Web3<span className="text-purple-500">Nest</span>
                 </span>
               </div>
               <div className="hidden md:ml-10 md:flex md:items-center md:space-x-8">

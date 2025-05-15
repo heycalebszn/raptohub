@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent transition-all duration-300">
-                Rapto<span className="text-neon-pink">Hub</span>
+                Web3<span className="text-neon-pink">Nest</span>
               </span>
               {/* Animated dot */}
               <span className="ml-1 inline-block w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
@@ -83,7 +83,7 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <a 
+            {/* <a 
               href="https://github.com/raptohub" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -93,7 +93,7 @@ const Navbar = () => {
                 <span>GitHub</span> 
                 <ExternalLink className="h-3 w-3" />
               </div>
-            </a>
+            </a> */}
             
             <a 
               href="#hire"
