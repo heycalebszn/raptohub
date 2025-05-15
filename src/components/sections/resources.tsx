@@ -1,21 +1,23 @@
-import { Search } from "lucide-react"
-import { categories, resourcesData } from "../../constants"
-import { ResourceCard } from "../ui/cards"
+import { Search } from "lucide-react";
+import { categories, resourcesData } from "../../constants";
+import { ResourceCard } from "../ui/cards";
 import { useState } from "react";
 
 const Resources = () => {
-    const [selectedCategory, setSelectedCategory] = useState("all");
-    const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
-    const filteredResources = resourcesData
-    .filter(resource => 
+  const filteredResources = resourcesData.filter(
+    (resource) =>
       (selectedCategory === "all" || resource.category === selectedCategory) &&
-      (searchTerm === "" || 
+      (searchTerm === "" ||
         resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         resource.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (resource.tags && resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())))
-      )
-    );
+        (resource.tags &&
+          resource.tags.some((tag) =>
+            tag.toLowerCase().includes(searchTerm.toLowerCase())
+          )))
+  );
   return (
     <div id="resources" className="relative py-24 overflow-hidden">
       {/* Background elements */}
@@ -30,16 +32,21 @@ const Resources = () => {
             Browse Our Collection
           </div>
           <h2 className="text-4xl font-bold mb-4">
-            Curated <span className="bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">Web3</span> Resources
+            Curated{" "}
+            <span className="bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">
+              Web3
+            </span>{" "}
+            Resources
           </h2>
           <p className="text-lg text-gray-300">
-            Discover the best learning materials, documentation, and tools to accelerate your blockchain development journey.
+            Discover the best learning materials, documentation, and tools to
+            accelerate your blockchain development journey.
           </p>
         </div>
-        
+
         {/* Search and Filter */}
         <div className="mb-12">
-          <div className="flex flex-col md:flex-row gap-6 md:items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-8 md:items-center justify-between">
             {/* Search */}
             <div className="relative w-full md:w-96">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -53,7 +60,7 @@ const Resources = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            
+
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -73,7 +80,7 @@ const Resources = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Resources Grid */}
         {filteredResources.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -86,13 +93,17 @@ const Resources = () => {
             <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-cyber-light/30 mb-4">
               <Search className="h-8 w-8 text-primary-300" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">No resources found</h3>
-            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              No resources found
+            </h3>
+            <p className="text-gray-400">
+              Try adjusting your search or filter criteria
+            </p>
           </div>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Resources
+export default Resources;

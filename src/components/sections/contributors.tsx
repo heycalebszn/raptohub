@@ -67,9 +67,9 @@ const Contributors = () => {
             Meet The Team
           </div>
           <h2 className="text-4xl font-bold mb-4">
-            Our{" "}
+            The{" "}
             <span className="bg-gradient-to-r from-neon-pink to-neon-purple bg-clip-text text-transparent">
-              Contributors
+              Founders
             </span>
           </h2>
           <p className="text-lg text-gray-300">
