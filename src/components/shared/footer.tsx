@@ -5,7 +5,7 @@ const footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="space-y-4">
               <div className="flex items-center">
-                <span className="text-2xl font-bold">Rapto<span className="text-purple-400">Hub</span></span>
+                <span className="text-2xl font-bold">Web3<span className="text-purple-400">Nest</span></span>
               </div>
               <p className="text-gray-400">
                 Your gateway to Web3 resources and learning
