@@ -1,4 +1,4 @@
-import { Globe, Code, Shield, Briefcase } from "lucide-react";
+import { Globe, Code, Shield } from "lucide-react";
 import { Category, Resource } from "../types";
 
 export const categories: Category[] = [

@@ -2,7 +2,6 @@ import {
   Github,
   Twitter,
   Linkedin,
-  ArrowUpRight,
   UserRound,
 } from "lucide-react";
 
