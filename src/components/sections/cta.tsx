@@ -103,7 +103,7 @@ const CTA = () => {
                         href={TelegramLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center justify-center px-8 py-3 bg-gradient-to-r from-neon-green to-neon-blue text-white font-semibold rounded-lg shadow-neon-blue hover:shadow-neon-green transition-all duration-300 hover:-translate-y-1"
+                        className="group flex items-center justify-center px-8 py-3 bg-gradient-to-r from-neon-green to-neon-blue text-white font-semibold rounded-lg shadow-neon-blue hover:shadow-neon-green transition-all duration-300 hover:-translate-y-1 cursor-pointer transform"
                       >
                         Join Teleram Community
                         <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />

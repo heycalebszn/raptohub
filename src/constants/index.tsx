@@ -13,7 +13,7 @@ export const categories: Category[] = [
     icon: <Code className="w-5 h-5" />,
   },
   {
-    id: "solidty",
+    id: "solidity",
     name: "Backend (Smart Contracts)",
     icon: <Code className="w-5 h-5" />,
   },
