@@ -1,6 +1,8 @@
 import { MessageSquare, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 
+import { QRCodeSVG } from "qrcode.react";
+
 const CTA = () => {
   const [copied, setCopied] = useState(false);
   const TelegramLink = "https://t.me/web3nestcommunity";
@@ -59,25 +61,29 @@ const CTA = () => {
 
                   {/* WhatsApp QR code or visual element */}
                   <div className="mt-4 md:mt-6 flex flex-col sm:flex-row items-center gap-4">
-                    <div className="w-32 h-32 bg-white p-2 rounded-lg relative overflow-hidden shadow-neon-green">
+                    <div className="">
                       <div className="absolute inset-0 bg-gradient-to-br from-neon-green to-neon-blue opacity-20"></div>
-                      {/* <div className="relative z-10 grid grid-cols-4 grid-rows-4 gap-1 w-full h-full">
-                        {Array.from({ length: 16 }).map((_, i) => (
-                          <div
-                            key={i}
-                            className={`${
-                              Math.random() > 0.5
-                                ? "bg-black"
-                                : "bg-transparent"
-                            } rounded-sm`}
-                          ></div>
-                        ))}
-                      </div> */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-xs text-black font-medium">
-                          Scan Me
-                        </span>
-                      </div>
+
+                      <QRCodeSVG
+                        value={"https://t.me/WEB3NESTCOMMUNITY"}
+                        title={"Title for my QR Code"}
+                        size={128}
+                        bgColor={"#ffffff"}
+                        fgColor={"#000000"}
+                        level={"L"}
+                        imageSettings={{
+                          src: "https://static.zpao.com/favicon.png",
+                          x: undefined,
+                          y: undefined,
+                          height: 24,
+                          width: 24,
+                          opacity: 1,
+                          excavate: true,
+                        }}
+                      />
+                      <p className="mt-2 text-lg font-medium text-purple-600">
+                        Scan Me
+                      </p>
                     </div>
 
                     <div className="flex flex-col gap-3 w-full">
