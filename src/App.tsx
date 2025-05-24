@@ -56,12 +56,6 @@ const App = () => {
               >
                 Discord
               </a>
-              <a
-                href="https://chat.whatsapp.com/JBqrLwbQJF9Cwilajd5Moo"
-                className="text-gray-400 hover:text-neon-green transition-colors duration-300"
-              >
-                WhatsApp
-              </a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
